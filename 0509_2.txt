@@ -1,0 +1,107 @@
+root@studentheejin-virtual-machine:~# /etc/shadow
+bash: /etc/shadow: 허가 거부
+root@studentheejin-virtual-machine:~# tail /etc/shadow
+gnome-initial-setup:*:19411:0:99999:7:::
+hplip:*:19411:0:99999:7:::
+gdm:*:19411:0:99999:7:::
+student-heejin:$y$j9T$eqg93bpNVb.8DrafUQaYk.$e.urzixGF4s8hFkQ97DVlwNPXc5nYggmNI1xKlyvyt4:19430:0:99999:7:::
+poly1:$y$j9T$WtKxW1R.KNF1Z9k6PTZr90$qe9PW9tx5o2i7K50SMzKGPSZWCLjigXdZwA8CT5VmK8:19479:10:30:10::20818:
+poly2:$y$j9T$.AfA2qOfjex.mmfieglE70$5qKFlK9BJSAbADoC7FMnY8n1J8Q6PR1tgnSMybrqJlB:19479:0:99999:7:::
+poly3:$y$j9T$Ru5kYQqV1Tw1sTPUPBN.v.$OMHgL4HDE7fhjHtfBc1BPZ.OprlncvcvG5DiLPpEbAB:19479:0:99999:7:::
+poly4:$y$j9T$H8ohMu7IygijJNAnRf6561$hr381ZyUC0qp9.bKblptqYuVcmZmLXBHm5sw.2eZT11:19479:0:99999:7:::
+hanbit1:$y$j9T$ff/5W/b.kK1EFRNOfjNyk/$kXsFG3pDviuVZqvFk.XflDyeEkrKwTnZ4EggwyOy8a7:19479:0:99999:7:::
+hanbit2:$y$j9T$SPG65ZdknTYrM.KtQ0fKx/$0J6p2X3VVCpqydkP9D4f1wip7Cpmn6.E/Hn/eP/pTO.:19479:0:99999:7:::
+root@studentheejin-virtual-machine:~# chown poly1 mydata.txt
+root@studentheejin-virtual-machine:~# ls -l mydata.txt
+-rwxrw-r-x 1 poly1 root 0  5월  9 09:25 mydata.txt
+root@studentheejin-virtual-machine:~# chown poly1.poly2 mydata.txt
+root@studentheejin-virtual-machine:~# ls -l mydata.txt
+-rwxrw-r-x 1 poly1 poly2 0  5월  9 09:25 mydata.txt
+root@studentheejin-virtual-machine:~# chgrp poly root mydata.txt
+chgrp: 잘못된 그룹: `poly'
+root@studentheejin-virtual-machine:~# chgrp root mydata.txt
+root@studentheejin-virtual-machine:~# ls -l mydata.txt
+-rwxrw-r-x 1 poly1 root 0  5월  9 09:25 mydata.txt
+root@studentheejin-virtual-machine:~# nano sample.txt
+root@studentheejin-virtual-machine:~# cat sample
+cat: sample: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# cat sample.txt
+리눅스 명령 연습 중
+파일 허가권과 소유권에 대한 명령 실습 중
+ls /var
+root@studentheejin-virtual-machine:~# ls -l sample
+ls: 'sample'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# ls -l sample.txt
+-rw-r--r-- 1 root root 94  5월  9 10:15 sample.txt
+root@studentheejin-virtual-machine:~# chmod u+x sample.txt
+root@studentheejin-virtual-machine:~# ls -l sample.txt
+-rwxr--r-- 1 root root 94  5월  9 10:15 sample.txt
+root@studentheejin-virtual-machine:~# sample.txt
+sample.txt: 명령을 찾을 수 없습니다
+root@studentheejin-virtual-machine:~# ./sample.txt
+./sample.txt: 줄 1: 리눅스: 명령어를 찾을 수 없음
+./sample.txt: 줄 2: 파일: 명령어를 찾을 수 없음
+backups  crash	local  log   metrics  run   spool
+cache	 lib	lock   mail  opt      snap  tmp
+root@studentheejin-virtual-machine:~# ls -l sample.txt
+-rwxr--r-- 1 root root 94  5월  9 10:15 sample.txt
+root@studentheejin-virtual-machine:~# chown poly1 sample.txt
+root@studentheejin-virtual-machine:~# chown poly1.poly1 sample.txt
+root@studentheejin-virtual-machine:~# ls -l sample.txt
+-rwxr--r-- 1 poly1 poly1 94  5월  9 10:15 sample.txt
+root@studentheejin-virtual-machine:~# chmod 754 sample.txt
+root@studentheejin-virtual-machine:~# ls -l sample.txt
+-rwxr-xr-- 1 poly1 poly1 94  5월  9 10:15 sample.txt
+root@studentheejin-virtual-machine:~# su - poly1
+su: failed to execute /bin/csh: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# login
+studentheejin-virtual-machine 로그인: poly1
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+/bin/csh을(를) 실행할 수 없습니다: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# pwd
+/root
+root@studentheejin-virtual-machine:~# su - poly1
+su: failed to execute /bin/csh: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# ls -l /root/sample.txt
+-rwxr-xr-- 1 poly1 poly1 94  5월  9 10:15 /root/sample.txt
+root@studentheejin-virtual-machine:~# mv sample.txt -poly1
+mv: 부적절한 옵션 -- 'p'
+자세한 정보는 'mv --help'를 입력하십시오.
+root@studentheejin-virtual-machine:~# cd
+root@studentheejin-virtual-machine:~# mkdir linkdir
+root@studentheejin-virtual-machine:~# cd linkdir/
+root@studentheejin-virtual-machine:~/linkdir# vi ariginalfile
+root@studentheejin-virtual-machine:~/linkdir# nano originalfile
+root@studentheejin-virtual-machine:~/linkdir# cat originalfile
+원본 파일입니다
+root@studentheejin-virtual-machine:~/linkdir# 
