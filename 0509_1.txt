@@ -1,0 +1,51 @@
+root@studentheejin-virtual-machine:~# touch mydata.txt
+root@studentheejin-virtual-machine:~# ls -l
+합계 60
+-rw-r--r-- 1 root root     0  5월  9 09:25 mydata.txt
+-rw-r--r-- 1 root root 10240  4월 18 10:48 poly.tar
+drwx------ 5 root root  4096  3월 14 11:21 snap
+drwxr-xr-x 2 root root  4096  4월 11 11:09 teest
+-rw-r--r-- 1 root root     0  4월 11 11:07 test
+drwxr-xr-x 2 root root  4096  4월 18 11:07 test2
+drwxr-xr-x 2 root root  4096  4월 18 11:08 test3
+drwxr-xr-x 2 root root  4096  3월 14 11:43 공개
+drwxr-xr-x 2 root root  4096  3월 14 11:43 다운로드
+drwxr-xr-x 2 root root  4096  3월 14 11:43 문서
+drwxr-xr-x 2 root root  4096  3월 14 11:43 바탕화면
+drwxr-xr-x 2 root root  4096  3월 14 11:43 비디오
+drwxr-xr-x 3 root root  4096  3월 21 09:23 사진
+drwxr-xr-x 2 root root  4096  3월 14 11:43 음악
+drwxr-xr-x 2 root root  4096  3월 14 11:43 템플릿
+root@studentheejin-virtual-machine:~# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@studentheejin-virtual-machine:~# chmod 777 mydata.txt
+root@studentheejin-virtual-machine:~# ls -l
+합계 60
+-rwxrwxrwx 1 root root     0  5월  9 09:25 mydata.txt
+-rw-r--r-- 1 root root 10240  4월 18 10:48 poly.tar
+drwx------ 5 root root  4096  3월 14 11:21 snap
+drwxr-xr-x 2 root root  4096  4월 11 11:09 teest
+-rw-r--r-- 1 root root     0  4월 11 11:07 test
+drwxr-xr-x 2 root root  4096  4월 18 11:07 test2
+drwxr-xr-x 2 root root  4096  4월 18 11:08 test3
+drwxr-xr-x 2 root root  4096  3월 14 11:43 공개
+drwxr-xr-x 2 root root  4096  3월 14 11:43 다운로드
+drwxr-xr-x 2 root root  4096  3월 14 11:43 문서
+drwxr-xr-x 2 root root  4096  3월 14 11:43 바탕화면
+drwxr-xr-x 2 root root  4096  3월 14 11:43 비디오
+drwxr-xr-x 3 root root  4096  3월 21 09:23 사진
+drwxr-xr-x 2 root root  4096  3월 14 11:43 음악
+drwxr-xr-x 2 root root  4096  3월 14 11:43 템플릿
+root@studentheejin-virtual-machine:~# ls -l mydata.txt
+-rwxrwxrwx 1 root root 0  5월  9 09:25 mydata.txt
+root@studentheejin-virtual-machine:~# chmod 644 mydata.txt
+root@studentheejin-virtual-machine:~# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@studentheejin-virtual-machine:~# chmod u+x mydata.txt
+root@studentheejin-virtual-machine:~# ls -l mydata.txt
+-rwxr--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@studentheejin-virtual-machine:~# chmod g+w mydata.txt
+root@studentheejin-virtual-machine:~# chmod o+x mydata.txt
+root@studentheejin-virtual-machine:~# ls -l mydata.txt
+-rwxrw-r-x 1 root root 0  5월  9 09:25 mydata.txt
+root@studentheejin-virtual-machine:~# 
