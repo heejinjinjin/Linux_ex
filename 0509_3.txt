@@ -1,0 +1,109 @@
+root@studentheejin-virtual-machine:~/linkdir# ls
+originalfile
+root@studentheejin-virtual-machine:~/linkdir# ln originalfile hardlink
+root@studentheejin-virtual-machine:~/linkdir# ln -s originalfile softlink
+root@studentheejin-virtual-machine:~/linkdir# ls -l
+합계 8
+-rw-r--r-- 2 root root 23  5월  9 10:50 hardlink
+-rw-r--r-- 2 root root 23  5월  9 10:50 originalfile
+lrwxrwxrwx 1 root root 12  5월  9 11:10 softlink -> originalfile
+root@studentheejin-virtual-machine:~/linkdir# ls -il
+합계 8
+1051011 -rw-r--r-- 2 root root 23  5월  9 10:50 hardlink
+1051011 -rw-r--r-- 2 root root 23  5월  9 10:50 originalfile
+1051010 lrwxrwxrwx 1 root root 12  5월  9 11:10 softlink -> originalfile
+root@studentheejin-virtual-machine:~/linkdir# mv originalfile ../
+root@studentheejin-virtual-machine:~/linkdir# ls
+hardlink  softlink
+root@studentheejin-virtual-machine:~/linkdir# cat hardlink
+원본 파일입니다
+root@studentheejin-virtual-machine:~/linkdir# cat softlink
+cat: softlink: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~/linkdir# cd
+root@studentheejin-virtual-machine:~# ls -il originalfile
+1051011 -rw-r--r-- 2 root root 23  5월  9 10:50 originalfile
+root@studentheejin-virtual-machine:~# mv originalfile _/linkdir
+mv: 'originalfile'를 '_/linkdir'로 옮길 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# mv originalfile /linkdir
+root@studentheejin-virtual-machine:~# cd linkdir
+root@studentheejin-virtual-machine:~/linkdir# cat softlink
+cat: softlink: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~/linkdir# ls -l
+합계 4
+-rw-r--r-- 2 root root 23  5월  9 10:50 hardlink
+lrwxrwxrwx 1 root root 12  5월  9 11:10 softlink -> originalfile
+root@studentheejin-virtual-machine:~/linkdir# cd
+root@studentheejin-virtual-machine:~# ls -il originalfile
+ls: 'originalfile'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# cd linkdir
+root@studentheejin-virtual-machine:~/linkdir# ls
+hardlink  softlink
+root@studentheejin-virtual-machine:~/linkdir# cd
+root@studentheejin-virtual-machine:~# ls
+linkdir     poly.tar    snap   test   test3  다운로드  바탕화면  사진  템플릿
+mydata.txt  sample.txt  teest  test2  공개   문서      비디오    음악
+root@studentheejin-virtual-machine:~# mv linkdir /originalfile
+root@studentheejin-virtual-machine:~# mv orifinalfile ../linkdir
+mv: 'orifinalfile' 상태 정보 확인 불가: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# ls
+mydata.txt  sample.txt  teest  test2  공개      문서      비디오  음악
+poly.tar    snap        test   test3  다운로드  바탕화면  사진    템플릿
+root@studentheejin-virtual-machine:~# cd linkdir
+bash: cd: linkdir: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# ls - l
+ls: '-'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+ls: 'l'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# ls -l
+합계 64
+-rwxrw-r-x 1 poly1 root      0  5월  9 09:25 mydata.txt
+-rw-r--r-- 1 root  root  10240  4월 18 10:48 poly.tar
+-rwxr-xr-- 1 poly1 poly1    94  5월  9 10:15 sample.txt
+drwx------ 5 root  root   4096  3월 14 11:21 snap
+drwxr-xr-x 2 root  root   4096  4월 11 11:09 teest
+-rw-r--r-- 1 root  root      0  4월 11 11:07 test
+drwxr-xr-x 2 root  root   4096  4월 18 11:07 test2
+drwxr-xr-x 2 root  root   4096  4월 18 11:08 test3
+drwxr-xr-x 2 root  root   4096  3월 14 11:43 공개
+drwxr-xr-x 2 root  root   4096  3월 14 11:43 다운로드
+drwxr-xr-x 2 root  root   4096  3월 14 11:43 문서
+drwxr-xr-x 2 root  root   4096  3월 14 11:43 바탕화면
+drwxr-xr-x 2 root  root   4096  3월 14 11:43 비디오
+drwxr-xr-x 3 root  root   4096  3월 21 09:23 사진
+drwxr-xr-x 2 root  root   4096  3월 14 11:43 음악
+drwxr-xr-x 2 root  root   4096  3월 14 11:43 템플릿
+root@studentheejin-virtual-machine:~# linkdir
+linkdir: 명령을 찾을 수 없습니다
+root@studentheejin-virtual-machine:~# nano original
+root@studentheejin-virtual-machine:~# cat original
+2nd original
+root@studentheejin-virtual-machine:~# ln original hardlink
+root@studentheejin-virtual-machine:~# ln -s original softlink
+root@studentheejin-virtual-machine:~# ls -il
+합계 72
+1051013 -rw-r--r-- 2 root  root     13  5월  9 11:27 hardlink
+1048771 -rwxrw-r-x 1 poly1 root      0  5월  9 09:25 mydata.txt
+1051013 -rw-r--r-- 2 root  root     13  5월  9 11:27 original
+1048742 -rw-r--r-- 1 root  root  10240  4월 18 10:48 poly.tar
+1051009 -rwxr-xr-- 1 poly1 poly1    94  5월  9 10:15 sample.txt
+1048582 drwx------ 5 root  root   4096  3월 14 11:21 snap
+1051012 lrwxrwxrwx 1 root  root      8  5월  9 11:28 softlink -> original
+1051039 drwxr-xr-x 2 root  root   4096  4월 11 11:09 teest
+1051036 -rw-r--r-- 1 root  root      0  4월 11 11:07 test
+1048746 drwxr-xr-x 2 root  root   4096  4월 18 11:07 test2
+1048748 drwxr-xr-x 2 root  root   4096  4월 18 11:08 test3
+1048604 drwxr-xr-x 2 root  root   4096  3월 14 11:43 공개
+1048602 drwxr-xr-x 2 root  root   4096  3월 14 11:43 다운로드
+1048605 drwxr-xr-x 2 root  root   4096  3월 14 11:43 문서
+1048601 drwxr-xr-x 2 root  root   4096  3월 14 11:43 바탕화면
+1048608 drwxr-xr-x 2 root  root   4096  3월 14 11:43 비디오
+1048607 drwxr-xr-x 3 root  root   4096  3월 21 09:23 사진
+1048606 drwxr-xr-x 2 root  root   4096  3월 14 11:43 음악
+1048603 drwxr-xr-x 2 root  root   4096  3월 14 11:43 템플릿
+root@studentheejin-virtual-machine:~# yes > /dev/null
+죽었음 
+root@studentheejin-virtual-machine:~# 
+root@studentheejin-virtual-machine:~# ps -ef|grep yes
+root        3368    2174 99 11:37 pts/0    00:03:58 yes
+root        3394    3381  0 11:41 pts/1    00:00:00 grep --color=auto yes
+root@studentheejin-virtual-machine:~# kill -9 3368
+root@studentheejin-virtual-machine:~# 
