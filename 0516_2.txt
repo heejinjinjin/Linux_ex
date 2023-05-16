@@ -1,0 +1,254 @@
+root@studentheejin-virtual-machine:~# cd Downloads
+bash: cd: Downloads: 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~# ls
+hardlink    poly.tar    softlink  test2  다운로드  비디오  템플릿
+mydata.txt  sample.txt  teest     test3  문서      사진
+original    snap        test      공개   바탕화면  음악
+root@studentheejin-virtual-machine:~# cd 다운로드
+root@studentheejin-virtual-machine:~/다운로드# ls
+root@studentheejin-virtual-machine:~/다운로드# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+--2023-05-16 10:24:58--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dl.google.com (dl.google.com) 해석 중... 142.250.199.78, 2404:6800:4005:81d::200e
+다음으로 연결 중: dl.google.com (dl.google.com)|142.250.199.78|:443... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 94953468 (91M) [application/x-debian-package]
+저장 위치: ‘google-chrome-stable_current_amd64.deb’
+
+google-chrome-stabl 100%[===================>]  90.55M  11.4MB/s    / 6.1s     
+
+2023-05-16 10:25:05 (14.8 MB/s) - ‘google-chrome-stable_current_amd64.deb’ 저장함 [94953468/94953468]
+
+root@studentheejin-virtual-machine:~/다운로드# ls
+google-chrome-stable_current_amd64.deb
+root@studentheejin-virtual-machine:~/다운로드# dpkg -i google-chrome-stable_currunt_amd64.deb
+dpkg: 오류: cannot access archive 'google-chrome-stable_currunt_amd64.deb': 그런 파일이나 디렉터리가 없습니다
+root@studentheejin-virtual-machine:~/다운로드# dpkg -i google-chrome-stable_current_amd64.deb 
+Selecting previously unselected package google-chrome-stable.
+(데이터베이스 읽는중 ...현재 202163개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack google-chrome-stable_current_amd64.deb ...
+Unpacking google-chrome-stable (113.0.5672.92-1) ...
+google-chrome-stable (113.0.5672.92-1) 설정하는 중입니다 ...
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/x-www-browser (x-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/gnome-www-browser (gnome-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/google-chrome (google-chrome) in auto mode
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for man-db (2.10.2-1) ...
+root@studentheejin-virtual-machine:~/다운로드# apt install google-chrome-stable_current_amd64.deb 
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+E: google-chrome-stable_current_amd64.deb 패키지를 찾을 수 없습니다
+root@studentheejin-virtual-machine:~/다운로드# apt install ./google-chrome-stable_current_amd64.deb 
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+주의, './google-chrome-stable_current_amd64.deb' 대신에 'google-chrome-stable' 패키지를 선택합니다
+패키지 google-chrome-stable는 이미 최신 버전입니다 (113.0.5672.92-1).
+0개 업그레이드, 0개 새로 설치, 0개 제거 및 0개 업그레이드 안 함.
+root@studentheejin-virtual-machine:~/다운로드# goole-chrome
+goole-chrome: 명령을 찾을 수 없습니다
+root@studentheejin-virtual-machine:~/다운로드# nano google-chrome-stable
+root@studentheejin-virtual-machine:~/다운로드# nano /usr/bin/google-chrome-stable
+root@studentheejin-virtual-machine:~/다운로드# google-chrome
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:20.841: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:20.849: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:20.918: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.016: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.019: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.079: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.166: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.169: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.259: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.422: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.426: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.552: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.961: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:21.964: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:22.056: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:22.065: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:22.112: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:22.166: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:22.726: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:22.740: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:23.643: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:36.219: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:36.220: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:40.052: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:40.057: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:40.058: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:40.822: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:40.827: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:40.976: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:40.979: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:40.982: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.126: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.127: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.130: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.223: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.228: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.262: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.334: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.335: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.391: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.470: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.822: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.855: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:41.975: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.038: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.105: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.191: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.255: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.329: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.406: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.502: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.606: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.609: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.711: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.714: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.727: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.815: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.819: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.824: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.943: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.947: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.975: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.978: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:42.982: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.039: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.095: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.279: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.351: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.431: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.503: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.582: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.647: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.742: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.809: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.895: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:43.999: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.248: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.319: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.391: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.430: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.535: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.615: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.686: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.778: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.778: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.838: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.843: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.927: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.927: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:44.970: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:45.006: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:45.008: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:45.039: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:45.157: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3152): IBUS-WARNING **: 10:46:45.158: google-chrome has no capability of surrounding-text feature
+[0516/104657.686640:ERROR:nacl_helper_linux.cc(355)] NaCl helper process running without a sandbox!
+Most likely you need to configure your SUID sandbox correctly
+root@studentheejin-virtual-machine:~/다운로드# google-chrome
+^Z
+[1]+  멈춤                  google-chrome
+root@studentheejin-virtual-machine:~/다운로드# bg
+[1]+ google-chrome &
+root@studentheejin-virtual-machine:~/다운로드# 
+root@studentheejin-virtual-machine:~/다운로드# ^C
+root@studentheejin-virtual-machine:~/다운로드# 
