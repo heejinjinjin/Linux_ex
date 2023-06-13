@@ -357,3 +357,26 @@ root@studentheejin-virtual-machine:/var/www/html# ufw allow 80
 규칙이 추가되었습니다
 규칙이 추가되었습니다 (v6)
 root@studentheejin-virtual-machine:/var/www/html# 
+root@studentheejin-virtual-machine:/var/www/html# cd
+root@studentheejin-virtual-machine:~# ls
+hardlink    poly.tar    softlink  test2  다운로드  비디오  템플릿
+mydata.txt  sample.txt  teest     test3  문서      사진
+original    snap        test      공개   바탕화면  음악
+root@studentheejin-virtual-machine:~# cd 다운로드
+root@studentheejin-virtual-machine:~/다운로드# ls
+0612-main      google-chrome-stable_current_amd64.deb  ncftp_3.2.6-1_amd64.deb
+0612-main.zip  mc_4.8.28-1_amd64.deb
+root@studentheejin-virtual-machine:~/다운로드# 0612-main
+0612-main: 명령을 찾을 수 없습니다
+root@studentheejin-virtual-machine:~/다운로드# cd 0612-main
+root@studentheejin-virtual-machine:~/다운로드/0612-main# ls
+01.html  04.html  07.html  10.html  13.html  16.html  19.html  22.html
+02.html  05.html  08.html  11.html  14.html  17.html  20.html  23.html
+03.html  06.html  09.html  12.html  15.html  18.html  21.html
+root@studentheejin-virtual-machine:~/다운로드/0612-main# mv *.html /var/www/htmlroot@studentheejin-virtual-machine:~/다운로드/0612-main# cd /var/www/html
+root@studentheejin-virtual-machine:/var/www/html# ls
+01.html  04.html  07.html  10.html  13.html  16.html  19.html  22.html
+02.html  05.html  08.html  11.html  14.html  17.html  20.html  23.html
+03.html  06.html  09.html  12.html  15.html  18.html  21.html  index.html
+root@studentheejin-virtual-machine:/var/www/html# 
+
