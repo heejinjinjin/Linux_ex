@@ -1,0 +1,55 @@
+root@studentheejin-virtual-machine:/var/www/html/xe/modules/board# apt-get -y install php php-gd php-xml
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+패키지 php는 이미 최신 버전입니다 (1:7.2+60ubuntu1).
+다음의 추가 패키지가 설치될 것입니다 :
+  php7.2-gd php7.2-xml
+다음 새 패키지를 설치할 것입니다:
+  php-gd php-xml php7.2-gd php7.2-xml
+0개 업그레이드, 4개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+139 k바이트 아카이브를 받아야 합니다.
+이 작업 후 613 k바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://mirror.kakao.com/ubuntu bionic/main amd64 php-gd all 1:7.2+60ubuntu1 [1,996 B]
+받기:2 http://mirror.kakao.com/ubuntu bionic/universe amd64 php-xml all 1:7.2+60ubuntu1 [2,024 B]
+받기:3 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 php7.2-gd amd64 7.2.24-0ubuntu0.18.04.17 [27.1 kB]
+받기:4 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 php7.2-xml amd64 7.2.24-0ubuntu0.18.04.17 [108 kB]
+내려받기 139 k바이트, 소요시간 2초 (68.8 k바이트/초)
+Selecting previously unselected package php7.2-gd.
+(데이터베이스 읽는중 ...현재 204084개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../php7.2-gd_7.2.24-0ubuntu0.18.04.17_amd64.deb ...
+Unpacking php7.2-gd (7.2.24-0ubuntu0.18.04.17) ...
+Selecting previously unselected package php-gd.
+Preparing to unpack .../php-gd_1%3a7.2+60ubuntu1_all.deb ...
+Unpacking php-gd (1:7.2+60ubuntu1) ...
+Selecting previously unselected package php7.2-xml.
+Preparing to unpack .../php7.2-xml_7.2.24-0ubuntu0.18.04.17_amd64.deb ...
+Unpacking php7.2-xml (7.2.24-0ubuntu0.18.04.17) ...
+Selecting previously unselected package php-xml.
+Preparing to unpack .../php-xml_1%3a7.2+60ubuntu1_all.deb ...
+Unpacking php-xml (1:7.2+60ubuntu1) ...
+php7.2-gd (7.2.24-0ubuntu0.18.04.17) 설정하는 중입니다 ...
+
+Creating config file /etc/php/7.2/mods-available/gd.ini with new version
+php-gd (1:7.2+60ubuntu1) 설정하는 중입니다 ...
+php7.2-xml (7.2.24-0ubuntu0.18.04.17) 설정하는 중입니다 ...
+
+Creating config file /etc/php/7.2/mods-available/dom.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/simplexml.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/wddx.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/xml.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/xmlreader.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/xmlwriter.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/xsl.ini with new version
+php-xml (1:7.2+60ubuntu1) 설정하는 중입니다 ...
+Processing triggers for libapache2-mod-php7.2 (7.2.24-0ubuntu0.18.04.17) ...
+root@studentheejin-virtual-machine:/var/www/html/xe/modules/board# systemctl restart arpache2
+Failed to restart arpache2.service: Unit arpache2.service not found.
+root@studentheejin-virtual-machine:/var/www/html/xe/modules/board# systemctl restart apache2
+root@studentheejin-virtual-machine:/var/www/html/xe/modules/board# 
